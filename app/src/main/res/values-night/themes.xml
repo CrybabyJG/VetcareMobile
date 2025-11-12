@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme (dark). -->
+    <style name="Base.Theme.ProjectVET" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary -->
+        <item name="colorPrimary">#A5D6A7</item>           <!-- Verde suave para botones -->
+        <item name="colorOnPrimary">#003300</item>         <!-- Texto oscuro -->
+        <item name="colorPrimaryContainer">#1B5E20</item>  <!-- Verde profundo para contenedores -->
+        <item name="colorOnPrimaryContainer">#C8E6C9</item> <!-- Texto claro -->
+
+        <!-- Secondary -->
+        <item name="colorSecondary">#81C784</item>
+        <item name="colorOnSecondary">#003300</item>
+        <item name="colorSecondaryContainer">#2E7D32</item>
+        <item name="colorOnSecondaryContainer">#E8F5E9</item>
+
+        <!-- Tertiary -->
+        <item name="colorTertiary">#AED581</item>
+        <item name="colorOnTertiary">#102000</item>
+        <item name="colorTertiaryContainer">#33691E</item>
+        <item name="colorOnTertiaryContainer">#F1F8E9</item>
+
+        <!-- Error -->
+        <item name="colorError">#F2B8B5</item>
+        <item name="colorOnError">#601410</item>
+        <item name="colorErrorContainer">#8C1D18</item>
+        <item name="colorOnErrorContainer">#F9DEDC</item>
+
+        <!-- Background & Surface -->
+        <item name="android:colorBackground">#121212</item>
+        <item name="colorOnBackground">#E0E0E0</item>
+        <item name="colorSurface">#121212</item>
+        <item name="colorOnSurface">#E0E0E0</item>
+        <item name="colorSurfaceVariant">#49454F</item>
+        <item name="colorOnSurfaceVariant">#CAC4D0</item>
+
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Outline -->
+        <item name="colorOutline">#938F99</item>
+    </style>
+</resources>

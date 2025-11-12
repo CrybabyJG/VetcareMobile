@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">ProjectVET</string>
+    <!-- Login Activity -->
+    <string name="login_title">Accede a tu cuenta</string>
+    <string name="mail_title">Email</string>
+    <string name="mail_hint">Correo</string>
+    <string name="password_title">Contraseña</string>
+    <string name="login_button">Iniciar Sesión</string>
+    <string name="register_text">¿No tienes una cuenta? Regístrate</string>
+    <string name="forgot_text">¿Olvidaste tu contraseña?</string>
+    <string name="app_title">¡Bienvenido a VetCare!</string>
+    <!-- Main Activity -->
+    <!-- Drawer Menu -->
+    <string name="drawer_appoinment">Citas</string>
+    <string name="drawer_inventory">Inventario</string>
+    <string name="drawer_diseases">Enfermedades</string>
+    <string name="drawer_laboratories">Laboratorios</string>
+    <string name="drawer_clients">Clientes</string>
+    <string name="drawer_settings">Configuración</string>
+    <string name="navigation_drawer_open">Abrir menú</string>
+    <string name="navigation_drawer_close">Cerrar menú</string>
+    <!-- Bottom Navigation -->
+    <string name="bottom_nav_home">Inicio</string>
+    <string name="bottom_nav_users">Usuarios</string>
+    <string name="bottom_nav_account">Cuenta</string>
+    <!-- Floating Action Button -->
+    <string name="fabDescriptionEnf">Registrar Enfermedad</string>
+    <string name="fabDescriptionLab">Registrar Laboratorio</string>
+    <string name="fabDescriptionClnt">Registrar Cliente</string>
+    <!-- Dialogs Add -->
+    <!-- Dialog Enfermedad -->
+    <string name="dialog_add_disease_hint_code">Codigo de Enfermedad</string>
+    <string name="dialog_add_disease_hint_name">Nombre de Enfermedad</string>
+    <!-- Dialog Laboratorio -->
+    <string name="dialog_add_laboratory_hint_code">Codigo de Laboratorio</string>
+    <string name="dialog_add_Laboratory_hint_name">Nombre de Laboratorio</string>
+    <string name="dialog_add_laboratory_hint_adress">Dirección del Laboratorio</string>
+    <string name="dialog_add_laboratory_hint_employee">Empleado del Laboratorio</string>
+    <!-- Dialog Cliente -->
+    <string name="dialog_add_client_hint_code">Codigo de Cliente</string>
+    <string name="dialog_add_client_hint_names">Nombres</string>
+    <string name="dialog_add_client_hint_lastname1">Primer Apellido</string>
+    <string name="dialog_add_client_hint_lastname2">Segundo Apellido</string>
+    <string name="dialog_add_client_hint_email">Correo Electrónico</string>
+    <string name="dialog_add_client_hint_phone">Teléfono</string>
+    <string name="dialog_add_client_hint_address">Dirección</string>
+
+    <!-- Profile Fragment -->
+    <string name="profile_picture">Foto de perfil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

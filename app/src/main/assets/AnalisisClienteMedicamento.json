@@ -1,0 +1,42 @@
+[
+  {
+    "medicamento": "Brodie",
+    "cantidad": 4,
+    "total": 680
+  },
+  {
+    "medicamento": "Chrissy",
+    "cantidad": 2,
+    "total": 300
+  },
+  {
+    "medicamento": "Cornell",
+    "cantidad": 3,
+    "total": 930
+  },
+  {
+    "medicamento": "Hamish",
+    "cantidad": 3,
+    "total": 555
+  },
+  {
+    "medicamento": "Marta",
+    "cantidad": 5,
+    "total": 1250
+  },
+  {
+    "medicamento": "Mattie",
+    "cantidad": 1,
+    "total": 285
+  },
+  {
+    "medicamento": "Milka",
+    "cantidad": 3,
+    "total": 241.5
+  },
+  {
+    "medicamento": "Tessie",
+    "cantidad": 1,
+    "total": 295
+  }
+]

@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ProjectVET" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary -->
+        <item name="colorPrimary">#2E7D32</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">#A5D6A7</item>
+        <item name="colorOnPrimaryContainer">#002107</item>
+
+        <!-- Secondary -->
+        <item name="colorSecondary">#388E3C</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">#C8E6C9</item>
+        <item name="colorOnSecondaryContainer">#003300</item>
+
+        <!-- Tertiary -->
+        <item name="colorTertiary">#558B2F</item>
+        <item name="colorOnTertiary">#FFFFFF</item>
+        <item name="colorTertiaryContainer">#DCEDC8</item>
+        <item name="colorOnTertiaryContainer">#102000</item>
+
+        <!-- Error -->
+        <item name="colorError">#B3261E</item>
+        <item name="colorOnError">#FFFFFF</item>
+        <item name="colorErrorContainer">#F9DEDC</item>
+        <item name="colorOnErrorContainer">#410E0B</item>
+
+        <!-- Background & Surface -->
+        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="colorOnBackground">#1B1B1B</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#1B1B1B</item>
+        <item name="colorSurfaceVariant">#E0E0E0</item>
+        <item name="colorOnSurfaceVariant">#49454F</item>
+
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Outline -->
+        <item name="colorOutline">#79747E</item>
+    </style>
+
+    <!-- Tema principal que hereda la base -->
+    <style name="Theme.ProjectVET" parent="Base.Theme.ProjectVET" />
+</resources>

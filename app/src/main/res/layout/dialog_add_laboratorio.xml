@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/etCodigoLaboratorio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/dialog_add_laboratory_hint_code" />
+    <EditText
+        android:id="@+id/etNombreLaboratorio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/dialog_add_Laboratory_hint_name"
+        android:layout_marginTop="8dp" />
+    <EditText
+        android:id="@+id/etDireccionLaboratorio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/dialog_add_laboratory_hint_adress"
+        android:layout_marginTop="8dp" />
+    <EditText
+        android:id="@+id/etEmpleadoLaboratorio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/dialog_add_laboratory_hint_employee"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
