@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.drawer_diseases -> replaceFragment(EnfermedadesFragment(), "Enfermedades")
                 R.id.drawer_laboratories -> replaceFragment(LaboratorioFragment(), "Laboratorios")
                 R.id.drawer_clients -> replaceFragment(ClientesFragment(), "Clientes")
-                R.id.drawer_compose -> replaceFragment(HolaMundoFragment(), "Compose")
+                R.id.drawer_compose -> replaceFragment(HolaMundoFragment(), "Compose Demo")
                 // Agrega otros items si los tienes
             }
             drawerLayout.closeDrawer(GravityCompat.START)

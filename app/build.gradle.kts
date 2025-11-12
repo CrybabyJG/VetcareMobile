@@ -37,10 +37,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.6.8"
-    }
-
     kotlinOptions {
         jvmTarget = "11"
     }
