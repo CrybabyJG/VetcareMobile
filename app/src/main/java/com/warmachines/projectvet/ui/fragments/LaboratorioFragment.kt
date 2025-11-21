@@ -41,40 +41,6 @@ class LaboratorioFragment : Fragment(R.layout.fragment_laboratorios) {
 
         // Carga inicial
         vm.load()
-
-        // 🔹 FAB para agregar nueva enfermedad
-        b.fabAddLaboratorio.setOnClickListener {
-            mostrarDialogoAgregar()
-        }
-    }
-
-    private fun mostrarDialogoAgregar() {
-        val dialogView = LayoutInflater.from(requireContext())
-            .inflate(R.layout.dialog_add_laboratorio, null)
-
-        val etCodigolab = dialogView.findViewById<EditText>(R.id.etCodigoLaboratorio)
-        val etNombrelab = dialogView.findViewById<EditText>(R.id.etNombreLaboratorio)
-        val etDireccionlab = dialogView.findViewById<EditText>(R.id.etDireccionLaboratorio)
-        val etEmpleadolab = dialogView.findViewById<EditText>(R.id.etEmpleadoLaboratorio)
-
-        AlertDialog.Builder(requireContext())
-            .setTitle("Nueva Enfermedad")
-            .setView(dialogView)
-            .setPositiveButton("Guardar") { d, _ ->
-                val codigolab = etCodigolab.text.toString().trim()
-                val nombrelab = etNombrelab.text.toString().trim()
-                val direccionlab = etDireccionlab.text.toString().trim()
-                val empleadolab = etEmpleadolab.text.toString().trim()
-
-                if (codigolab.isNotEmpty() && nombrelab.isNotEmpty() && direccionlab.isNotEmpty() && empleadolab.isNotEmpty()) {
-                    vm.addEnfermedad(codigolab, nombrelab, direccionlab, empleadolab)
-                } else {
-                    Snackbar.make(b.root, "Completa todos los campos", Snackbar.LENGTH_LONG).show()
-                }
-                d.dismiss()
-            }
-            .setNegativeButton("Cancelar") { d, _ -> d.dismiss() }
-            .show()
     }
 
     override fun onDestroyView() {

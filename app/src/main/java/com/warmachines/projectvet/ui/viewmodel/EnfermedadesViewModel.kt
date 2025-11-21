@@ -31,30 +31,4 @@ class EnfermedadesViewModel : ViewModel() {
             }
         }
     }
-
-    // 🔹 Nuevo: agregar enfermedad vía POST
-    fun addEnfermedad(codigo: String, nombre: String) {
-        if (_loading.value == true) return
-        _loading.value = true
-        _error.value = null
-        viewModelScope.launch {
-            try {
-                // Aquí creamos el objeto Enfermedades para mandar al backend
-                val nueva = Enfermedades(
-                    Codigo_Enfermedades = codigo,        // ajusta según tu modelo (si es "ID_Enfermedad")
-                    Nombre_Enfermedad = nombre
-                )
-
-                api.addEnfermedad(nueva)
-
-                // Luego refrescamos la lista
-                _enfermedades.value = api.getEnfermedades()
-
-            } catch (e: Exception) {
-                _error.value = e.message ?: "Error al agregar"
-            } finally {
-                _loading.value = false
-            }
-        }
-    }
 }

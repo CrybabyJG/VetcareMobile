@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object APIClient_Cliente {
-    private const val BASE_URL = "http://172.20.10.11:8000/seguridad/clientes/"
+    private const val BASE_URL = "https://veterinariamongo20251120233325-dta4aecwajcda4b5.canadacentral-01.azurewebsites.net/api/clientes/"
 
     fun create(): APIService_Cliente {
         val logger = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }

@@ -1,14 +1,11 @@
 package com.warmachines.projectvet.models
 
-data class MostrarLaboratorio(
-    val Codigo_Laboratorio: String,
-    val Nombre_Laboratorio: String,
-    val Direccion_Laboratorio: String
-)
+import com.google.gson.annotations.SerializedName
 
 data class Laboratorio(
-    val Codigo_Laboratorio: String,
-    val Nombre_Laboratorio: String,
-    val Direccion_Laboratorio: String,
-    val Empleado: String
+    @SerializedName("id") val id: String,
+    @SerializedName("codigo_Laboratorio") val Codigo_Laboratorio: String,
+    @SerializedName("nombre_Laboratorio") val Nombre_Laboratorio: String,
+    @SerializedName("direccion_Laboratorio") val Direccion_Laboratorio: String,
+    @SerializedName("empleado") val Empleado_Laboratorio: String
 )

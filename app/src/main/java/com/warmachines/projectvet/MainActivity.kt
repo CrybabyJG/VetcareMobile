@@ -20,6 +20,7 @@ import com.warmachines.projectvet.ui.fragments.LaboratorioFragment
 import com.warmachines.projectvet.ui.fragments.ProfileFragment
 import com.warmachines.projectvet.ui.fragments.UsuariosFragment
 import com.warmachines.projectvet.ui.fragments.HolaMundoFragment
+import com.warmachines.projectvet.ui.fragments.cubo.DashboardFragment2
 
 class MainActivity : AppCompatActivity() {
 
@@ -51,8 +52,8 @@ class MainActivity : AppCompatActivity() {
         // Bottom navigation
         bottomNav.setOnItemSelectedListener { item ->
             when(item.itemId) {
-                R.id.nav_home -> replaceFragment(DashboardFragment(), "Dashboard")
-                R.id.nav_users -> replaceFragment(fragment = UsuariosFragment(), title="Usuarios")
+                R.id.nav_home -> replaceFragment(DashboardFragment2(), "Dashboard")
+                R.id.nav_users -> replaceFragment(fragment = ClientesFragment(), title="Clientes")
                 R.id.nav_account -> replaceFragment(ProfileFragment(), "Perfil")
             }
             true
@@ -63,8 +64,6 @@ class MainActivity : AppCompatActivity() {
             when(item.itemId) {
                 R.id.drawer_diseases -> replaceFragment(EnfermedadesFragment(), "Enfermedades")
                 R.id.drawer_laboratories -> replaceFragment(LaboratorioFragment(), "Laboratorios")
-                R.id.drawer_clients -> replaceFragment(ClientesFragment(), "Clientes")
-                R.id.drawer_compose -> replaceFragment(HolaMundoFragment(), "Compose Demo")
                 // Agrega otros items si los tienes
             }
             drawerLayout.closeDrawer(GravityCompat.START)
@@ -72,19 +71,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Fragment inicial
-        replaceFragment(DashboardFragment(), "Dashboard", addToBackStack = false)
+        replaceFragment(DashboardFragment2(), "Dashboard", addToBackStack = false)
 
         // Listener para actualizar título al retroceder
         supportFragmentManager.addOnBackStackChangedListener {
             val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container)
             when(currentFragment) {
-                is DashboardFragment -> supportActionBar?.title = "Dashboard"
+                is DashboardFragment2 -> supportActionBar?.title = "Dashboard"
                 is EnfermedadesFragment -> supportActionBar?.title = "Enfermedades"
                 is LaboratorioFragment -> supportActionBar?.title = "Laboratorios"
                 is ClientesFragment -> supportActionBar?.title = "Clientes"
                 is ProfileFragment -> supportActionBar?.title = "Perfil"
-                is UsuariosFragment -> supportActionBar?.title = "Usuarios"
-                is HolaMundoFragment -> supportActionBar?.title = "Compose Demo"
             }
         }
 

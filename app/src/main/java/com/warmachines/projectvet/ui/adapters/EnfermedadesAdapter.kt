@@ -29,7 +29,7 @@ class EnfermedadAdapter(private var items: List<Enfermedades> = emptyList())
     override fun onBindViewHolder(h: VH, pos: Int) {
         val it = items[pos]
         h.tvCodigo.text = it.Codigo_Enfermedades
-        h.tvNombre.text = it.Nombre_Enfermedad
+        h.tvNombre.text = it.Nombre_Enfermedades
     }
 
     override fun getItemCount() = items.size

@@ -32,35 +32,4 @@ class ClientesViewModel : ViewModel() {
             }
         }
     }
-
-    //Agregar cliente vía POST
-    fun addCliente(codigoCliente: String, nombres: String, apellido1: String, apellido2: String, correo: String, telefono: String, direccion: String) {
-        if (_loading.value == true) return
-        _loading.value = true
-        _error.value = null
-        viewModelScope.launch {
-            try {
-                //creamos el objeto Clientes para mandar al backend
-                val nueva = Clientes(
-                    Codigo_Cliente = codigoCliente,        // ajusta según tu modelo (si es "ID_Enfermedad")
-                    Nombres = nombres,
-                    Apellido1 = apellido1,
-                    Apellido2 = apellido2,
-                    Correo = correo,
-                    Telefono = telefono,
-                    Direccion = direccion
-                )
-
-                api.addCliente(nueva)
-
-                // Luego refrescamos la lista
-                _clientes.value = api.getClientes()
-
-            } catch (e: Exception) {
-                _error.value = e.message ?: "Error al agregar"
-            } finally {
-                _loading.value = false
-            }
-        }
-    }
 }

@@ -41,48 +41,6 @@ class ClientesFragment : Fragment(R.layout.fragment_clientes) {
 
         // Carga inicial
         vm.load()
-
-        // 🔹 FAB para agregar nueva enfermedad
-        b.fabAddCliente.setOnClickListener {
-            mostrarDialogoAgregar()
-        }
-    }
-
-    private fun mostrarDialogoAgregar() {
-        val dialogView = LayoutInflater.from(requireContext())
-            .inflate(R.layout.dialog_add_clientes, null)
-
-        val etCodigocliente = dialogView.findViewById<EditText>(R.id.etCodigoCliente)
-        val etNombres = dialogView.findViewById<EditText>(R.id.etNombresCliente)
-        val etApellido1 = dialogView.findViewById<EditText>(R.id.etApellido1Cliente)
-        val etApellido2 = dialogView.findViewById<EditText>(R.id.etApellido2Cliente)
-        val etCorreo = dialogView.findViewById<EditText>(R.id.etCorreoCliente)
-        val etTelefono = dialogView.findViewById<EditText>(R.id.etTelefonoCliente)
-        val etDireccion = dialogView.findViewById<EditText>(R.id.etDireccionCliente)
-
-        AlertDialog.Builder(requireContext())
-            .setTitle("Nuevo Cliente")
-            .setView(dialogView)
-            .setPositiveButton("Guardar") { d, _ ->
-                val codigocliente = etCodigocliente.text.toString().trim()
-                val nombres = etNombres.text.toString().trim()
-                val apellido1 = etApellido1.text.toString().trim()
-                val apellido2 = etApellido2.text.toString().trim()
-                val correo = etCorreo.text.toString().trim()
-                val telefono = etTelefono.text.toString().trim()
-                val direccion = etDireccion.text.toString().trim()
-
-                if (codigocliente.isNotEmpty() && nombres.isNotEmpty() && apellido1.isNotEmpty()
-                    && correo.isNotEmpty() && telefono.isNotEmpty() && direccion.isNotEmpty()) {
-                    vm.addCliente(codigocliente, nombres, apellido1, apellido2, correo,
-                        telefono, direccion)
-                } else {
-                    Snackbar.make(b.root, "Completa todos los campos", Snackbar.LENGTH_LONG).show()
-                }
-                d.dismiss()
-            }
-            .setNegativeButton("Cancelar") { d, _ -> d.dismiss() }
-            .show()
     }
 
     override fun onDestroyView() {

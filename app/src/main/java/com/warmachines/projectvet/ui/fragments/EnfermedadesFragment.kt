@@ -41,36 +41,6 @@ class EnfermedadesFragment : Fragment(R.layout.fragment_enfermedades) {
 
         // Carga inicial
         vm.load()
-
-        // 🔹 FAB para agregar nueva enfermedad
-        b.fabAddEnfermedad.setOnClickListener {
-            mostrarDialogoAgregar()
-        }
-    }
-
-    private fun mostrarDialogoAgregar() {
-        val dialogView = LayoutInflater.from(requireContext())
-            .inflate(R.layout.dialog_add_enfermedad, null)
-
-        val etCodigo = dialogView.findViewById<EditText>(R.id.etCodigoEnfermedad)
-        val etNombre = dialogView.findViewById<EditText>(R.id.etNombreEnfermedad)
-
-        AlertDialog.Builder(requireContext())
-            .setTitle("Nueva Enfermedad")
-            .setView(dialogView)
-            .setPositiveButton("Guardar") { d, _ ->
-                val codigo = etCodigo.text.toString().trim()
-                val nombre = etNombre.text.toString().trim()
-
-                if (codigo.isNotEmpty() && nombre.isNotEmpty()) {
-                    vm.addEnfermedad(codigo, nombre)
-                } else {
-                    Snackbar.make(b.root, "Completa todos los campos", Snackbar.LENGTH_LONG).show()
-                }
-                d.dismiss()
-            }
-            .setNegativeButton("Cancelar") { d, _ -> d.dismiss() }
-            .show()
     }
 
     override fun onDestroyView() {

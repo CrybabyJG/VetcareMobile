@@ -1,11 +1,14 @@
 package com.warmachines.projectvet.models
 
+import com.google.gson.annotations.SerializedName
+
 data class Clientes(
-    val Codigo_Cliente: String,
-    val Nombres: String,
-    val Apellido1: String,
-    val Apellido2: String,
-    val Correo: String,
-    val Telefono: String,
-    val Direccion: String
+    @SerializedName("id") val id: String,
+    @SerializedName("codigo_Cliente") val Codigo_Cliente: String,
+    @SerializedName("nombres") val Nombres: String,
+    @SerializedName("apellido1") val Apellido1: String,
+    @SerializedName("apellido2") val Apellido2: String,
+    @SerializedName("correo") val Correo: String,
+    @SerializedName("telefono") val Telefono: String,
+    @SerializedName("direccion") val Direccion: String
 )

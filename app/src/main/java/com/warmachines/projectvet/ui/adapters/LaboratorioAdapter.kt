@@ -1,5 +1,4 @@
 package com.warmachines.projectvet.ui.adapters
-import com.warmachines.projectvet.models.MostrarLaboratorio
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,11 +6,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.warmachines.projectvet.R
+import com.warmachines.projectvet.models.Laboratorio
 
-class LaboratorioAdapter(private var items: List<MostrarLaboratorio> = emptyList())
+class LaboratorioAdapter(private var items: List<Laboratorio> = emptyList())
     : RecyclerView.Adapter<LaboratorioAdapter.VH>() {
 
-    fun submit(list: List<MostrarLaboratorio>) {
+    fun submit(list: List<Laboratorio>) {
         items = list
         notifyDataSetChanged()
     }
